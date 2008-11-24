@@ -11,7 +11,7 @@ role :app, "213.85.145.134"
 role :web, "213.85.145.134"
 role :db,  "213.85.145.134", :primary => true
 
-set :rake, "usr/local/ruby-enterprise/bin/rake"
+set :rake, "/usr/local/ruby-enterprise/bin/rake"
 
 set :user, "pegas"
 set :admin_runner, "pegas"

@@ -15,7 +15,9 @@ test:
 
 production:
     adapter: mysql
-    database: learningrails_production
-    username: deploy
+    encoding: utf8
+    database: my_web
+    username: pegas
     password: secret
     host: localhost
+    socket: /tmp/mysql.sock

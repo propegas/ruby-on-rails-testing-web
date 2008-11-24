@@ -1,18 +1,20 @@
-set :application, "learningrails"
-set :deploy_to, "/var/www/apps/#{application}"
-
-role :app, "sampleapp.learningrails.com"
-role :web, "sampleapp.learningrails.com"
-role :db,  "sampleapp.learningrails.com", :primary => true
-
 default_run_options[:pty] = true
-set :repository,  "git://github.com/mzslater/learning-rails-sample-app.git"
-set :scm, "git"
-set :branch, "master"
-set :deploy_via, :remote_cache
+	set :repository,  "git://github.com/propegas/ruby-on-rails-testing-web.git"
+	set :scm, "git"
+	set :branch, "master"
+	set :deploy_via, :remote_cache
 
-set :user, "deploy"
-set :admin_runner, "deploy"
+set :application, "mytest2"
+set :deploy_to, "/usr/local/www/apache22/data/#{application}"
+
+role :app, "213.85.145.134"
+role :web, "213.85.145.134"
+role :db,  "213.85.145.134", :primary => true
+
+set :rake, "usr/local/ruby-enterprise/bin/rake"
+
+set :user, "pegas"
+set :admin_runner, "pegas"
 
 namespace :deploy do
   desc "Restart Application"
